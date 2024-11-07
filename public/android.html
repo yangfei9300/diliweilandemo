@@ -1,0 +1,498 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+
+    <meta property="og:type" content="webpage">
+    <meta property="og:url" content="http://www.hicling.com">
+    <meta property="og:title" content="HiCling-翰临科技">
+    <meta property="og:description" content="翰临科技">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="HiCling">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="pragram" content="no-cache">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no minimal-ui">
+    <meta name="keywords" content="翰临科技,Cling,HiCling,智能穿戴">
+    <meta name="description" content="翰临科技(HiCling Technology)是一家致力于智能穿戴产品研发的新兴高科技公司。">
+
+
+
+
+    <title>Cling Android App</title>
+    <link rel="stylesheet" href="http://static.hicling.com/v2/images/show/cling/code/HTML5.css">
+    <link rel="stylesheet" href="http://static.hicling.com/v2/images/show/cling/code/CSS3.css">
+    <style type="text/css">
+        body,
+        html {
+            margin: 0px;
+            padding: 0px;
+            background-color: #fff;
+            height: 100%;
+            width: 100%;
+            font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        #screen {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            margin: 0 auto;
+            padding: 0px;
+            background-color: #fff;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+            background: #FFF;
+            z-index: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        #screen_page {
+            margin: 0px;
+            padding: 0px;
+            display: inline-block;
+            background-color: #fff;
+            width: 100%;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .tip {
+            width: 100%;
+            height: 100%;
+            text-align: right;
+            position: absolute;
+            z-index: 1000;
+        }
+
+        .tip img {
+            width: 100%;
+            height: auto;
+        }
+
+        .logo {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            display: inline-block;
+            text-align: center;
+            margin-top: 15%;
+        }
+
+        .title {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            display: inline-block;
+            text-align: center;
+            margin-top: 10%;
+            font-size: 20px;
+            font-weight: 300;
+            position: relative;
+        }
+
+        .button {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            display: inline-block;
+            text-align: center;
+            margin-top: 5%;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .button a {
+            margin: 0px;
+            padding: 0px;
+            display: inline-block;
+            text-align: center;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            background-color: rgb(60, 188, 216);
+            color: #fff;
+        }
+
+        .version {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            display: inline-block;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        .intro {
+            width: 90%;
+            background: #fafafa;
+            border: solid 1px #eee;
+            margin: 0px;
+            padding: 5px 0px;
+            display: inline-block;
+            margin-top: 10%;
+            margin-left: 5%;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 300;
+
+        }
+
+        .intro p {
+            width: 90%;
+            margin: 0px;
+            padding: 0px;
+            display: inline-block;
+            line-height: 20px;
+            margin-left: 5%;
+        }
+
+        .company {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            display: inline-block;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 300;
+            margin-top: 15px;
+        }
+
+        .footbar-language {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 1003;
+            display: inline-block;
+            width: 100px;
+            height: 60px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        .footbar-language .language {
+            position: relative;
+            z-index: 1003;
+            display: inline-block;
+            width: 80px;
+            height: 26px;
+            line-height: 26px;
+            font-size: 14px;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .footbar-language .language-title {
+            margin: 0;
+            padding: 0;
+        }
+
+        .footbar-language .language-title i {
+            position: relative;
+            top: -2px;
+            display: inline-block;
+            font-style: normal;
+            font-weight: bolder;
+            font-family: 黑体;
+        }
+
+        .footbar-language ul#morelanguages {
+            position: absolute;
+            z-index: 1004;
+            top: -20px;
+            left: 0px;
+            display: inline-block;
+            width: 100px;
+            margin-left: -15px;
+            padding: 0;
+            border: 1px solid #ccc;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+            background-color: #fff;
+        }
+
+        .footbar-language ul#morelanguages li {
+            padding: 5px;
+        }
+
+        .footbar-language ul#morelanguages li:hover {
+            background-color: #ededed;
+            border-radius: 4px;
+        }
+
+        .footbar-language ul#morelanguages li a {
+            display: block;
+            width: 100px;
+            height: 20px;
+            display: block;
+            font-size: 14px;
+            color: #3E393A;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .footbar-language ul#morelanguages a:hover,
+        .footbar-language ul#morelanguages a:focus,
+        .footbar-language ul#morelanguages a:active {
+            color: #302C2D;
+            font-weight: 600;
+            text-decoration: none;
+            text-shadow: 0 1px 2px #D1D1D1;
+        }
+
+        #shade {
+            position: relative;
+            /*水平居中*/
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #shade p {
+            position: absolute;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+        }
+
+        #shade p span {
+            color: #5FD6FF;
+        }
+
+        #img {
+            position: absolute;
+            width: 300px;
+            z-index: 100;
+            right: -14px;
+            top: -50px;
+        }
+
+        #checked {
+            width: 60px;
+            position: relative;
+            margin: 0px auto;
+        }
+
+        .labelBox {
+            margin-bottom: 20px;
+            background: #409eff;
+            border-radius: 40px;
+            width: 60px;
+            position: relative;
+            height: 32px;
+        }
+
+        .check {
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        input[type=checkbox] {
+            border: 0 none !important;
+            clip: rect(1px, 1px, 1px, 1px);
+            height: 1px !important;
+            overflow: hidden !important;
+            position: absolute !important;
+            width: 1px !important;
+        }
+
+        @keyframes labelON {
+            0% {
+                top: 0px;
+                left: 0px;
+            }
+
+            100% {
+                top: 0px;
+                left: 28px;
+            }
+        }
+
+        @keyframes labelOFF {
+            0% {
+                top: 0px;
+                left: 28px;
+            }
+
+            100% {
+                top: 0px;
+                left: 0px;
+            }
+        }
+
+        input[type=checkbox]:checked+label.check {
+            top: 0px;
+            left: 28px;
+            -webkit-animation: labelON 0.2s ease-in 0s 1;
+            -moz-animation: labelON 0.2s ease-in 0s 1;
+            -o-animation: labelON 0.2s ease-in 0s 1;
+            -ms-animation: labelON 0.2s ease-in 0s 1;
+            animation: labelON 0.2s ease-in 0s 1;
+            box-shadow: #244766 -1px 0px 3px;
+        }
+
+        input[type=checkbox]+label.check {
+            top: 0px;
+            left: 0px;
+            -webkit-animation: labelOFF 0.2s ease-in 0s 1;
+            -moz-animation: labelOFF 0.2s ease-in 0s 1;
+            -o-animation: labelOFF 0.2s ease-in 0s 1;
+            -ms-animation: labelOFF 0.2s ease-in 0s 1;
+            animation: labelOFF 0.2s ease-in 0s 1;
+            box-shadow: #244766 1px 0px 3px;
+        }
+
+        .status {
+            text-align: center;
+            margin: 2px;
+        }
+
+        .tips {
+            position: absolute;
+            z-index: 999;
+            bottom: 10%;
+            width: 80%;
+            margin-left: 10%;
+            color: #999;
+        }
+
+        .lang {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section id="screen">
+        <div class="tip" id="shade" style="display: none;">
+            <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXcAAACICAYAAAAcc6uGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ4IDc5LjE2NDAzNiwgMjAxOS8wOC8xMy0wMTowNjo1NyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjAgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQxNENDNzYwRDRDRDExRUJBRTlDQjE2NTlBN0Y5RTAzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQxNENDNzYxRDRDRDExRUJBRTlDQjE2NTlBN0Y5RTAzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDE0Q0M3NUVENENEMTFFQkFFOUNCMTY1OUE3RjlFMDMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDE0Q0M3NUZENENEMTFFQkFFOUNCMTY1OUE3RjlFMDMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz74D2beAAAWE0lEQVR42uydDZAk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" />
+        </div>
+        <div class="lang">
+            <p class="status">1</p>
+            <div id="checked">
+                <div class="labelBox">
+                    <input type="checkbox" value="wi-fi" id="wifi" name="wifi" checked="checked" />
+                    <label for="wifi" class="check"></label>
+                </div>
+            </div>
+        </div>
+        <div id="screen_page" class="swiper-container">
+            <div class="logo">
+                <img src="http://static.hicling.com/v2/images/static/blue-logo.png" alt="HiCling" />
+            </div>
+            <div class="title">
+                Cling Android App
+            </div>
+            <div class="button">
+
+                <a id="message2" href="http://file.hicling.com/android/download">点击安装</a>
+
+            </div>
+            <div class="version">
+
+                <P id="message7">版本号： 2.7.4</P>
+
+
+            </div>
+            <div class="intro">
+
+                <p id="message3">Cling
+                    App通过与Cling智能腕表的同步，记录和储存Cling智能腕表所采集有关用户心跳、体温、运动、睡眠等数据。以此来实现用户对所有数据的查看和分析，帮助用户更好的了解自己。同时Cling
+                    App会根据每个用户不同的作息，智能生成相应的健身方案，来帮助用户改善自身健康水平，引领用户进入健康生活。此外Cling App为用户提供了一个社交网络，让所有用户都够互相认识，分享和交流健康的生活。
+                </p>
+                <p id="message4">请注意，在后台运行GPS会显著影响电池使用时间。</p>
+
+            </div>
+            <div class="company">
+                <p style="margin: 8px 0px;padding: 0px;" id="message5">翰临科技(HiCling Technology)</p>
+                <div class="copy-right" style="text-align: center;">
+                    <a href="https://beian.miit.gov.cn" target="_blank" class="goto">沪ICP备19035388号-1</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        var shade = document.querySelector('#shade');
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            shade.style.display = "block";
+        }
+        document.querySelector('.status').innerHTML = '中文';
+        var message1 = document.querySelector('#message1');
+        var message2 = document.querySelector('#message2');
+        var message3 = document.querySelector('#message3');
+        var message4 = document.querySelector('#message4');
+        var message5 = document.querySelector('#message5');
+        var message7 = document.querySelector('#message7');
+        document.querySelector(".check").onclick = function (argument) {
+            // body...
+            if (document.querySelector('.status').innerHTML === '中文') {
+                onOff = 'En';
+                message2.innerHTML = 'Download'
+                message3.innerHTML = " Cling wearables tracks user's daily activities and vital signals, by synchronizing with Cling App, user will be able to view the analysis of all the data and build up a healthy life style. Cling App will also learn user health habit and create customized fitness programs to fit user’s fitness goal. In addition, Cling App provides a social platform for all users to know each other and share workout moments. "
+                message4.innerHTML = "Please note, running GPS in App background can significantly affect battery use life."
+                message5.innerHTML = 'HiCling Technology'
+                message7.innerHTML = 'Version： 2.7.5'
+            } else {
+                onOff = '中文';
+                message2.innerHTML = '点击安装'
+                message3.innerHTML = 'Cling App通过与Cling智能腕表的同步，记录和储存Cling智能腕表所采集有关用户心跳、体温、运动、睡眠等数据。以此来实现用户对所有数据的查看和分析，帮助用户更好的了解自己。同时Cling App会根据每个用户不同的作息，智能生成相应的健身方案，来帮助用户改善自身健康水平，引领用户进入健康生活。此外Cling App为用户提供了一个社交网络，让所有用户都够互相认识，分享和交流健康的生活。'
+                message4.innerHTML = '请注意，在后台运行GPS会显著影响电池使用时间。'
+                message5.innerHTML = '翰临科技(HiCling Technology)'
+                message7.innerHTML = '版本号： 2.7.5.2512'
+            }
+
+            document.querySelector('.status').innerHTML = onOff
+        }
+    </script>
+</body>
+
+</html>
